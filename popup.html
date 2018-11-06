@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        background-color:  rgb(204, 214, 232);
+        width: 340px;
+      }
+      ul {
+        list-style: none;
+      }
+      input {
+        position: absolute;
+        right: 15px;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        width: auto;
+      }
+      label {
+        font-weight: bold
+      }
+      p {
+        padding-left: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Show node id</h1>
+      <div>
+        <label for="alert">Browser Message</label>
+        <input type="radio" name="display_setting" id="alert" value="alert"/>
+        <p>Alerts a message with the node id</p>
+      </div>
+      <div>
+        <label for="raw_data">Raw Data</label>
+        <input type="radio" name="display_setting" value="raw_data" id="raw_data"/>
+        <p>Fills in the "Column Node" input on the Raw Data Reports setup page</p>
+      </div>
+      <div>
+        <label for="off">Off</label>
+        <input type="radio" name="display_setting" id="off" value="off" checked/>
+      </div>
+    </form>
+    <button id="autofill">Autofill inputs</button>
+  </body>
+  <script src="popup.js"></script>
+</html>
