@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Procentive Form Extension",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "Displays form node identifiers",
     "permissions": [ "storage", "tabs" ],
     "icons": {

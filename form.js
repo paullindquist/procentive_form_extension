@@ -32,5 +32,15 @@
     addClickListener();
   }, 1000);
 
+  chrome.runtime.onMessage.addListener(function(msg){
+    debugger;
+    const inputs = document.getElementsByTagName('frame').midfr.contentWindow.document.querySelectorAll('input[type="text"], textarea');
+    inputs.forEach(input => {
+      const nodeId = input.closest('td').getAttribute('nodeid');
+      if (nodeId) {
+        input.value = nodeId;
+      }
+    });
+  });
 })();
   

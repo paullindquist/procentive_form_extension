@@ -17,4 +17,12 @@
       }
     }
   });
+  const autofillButton = document.getElementById('autofill');
+  autofillButton.addEventListener('click', () => {
+    chrome.tabs.query({ "url":["*://*.procentive.com/treatment/edit.jsp*"]}, tabs => {
+      tabs.forEach(tab => {
+        chrome.tabs.sendMessage(tab.id, {greeting: "hello"}, () => {});
+      });
+    });
+  });
 })();
